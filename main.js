@@ -95,12 +95,87 @@ Document Object Model
 
 //Query Selector All
 
-let titles = document.querySelectorAll('.title') //this will give us a node list, we can use array methods on node list
-console.log(titles);
-titles[0].textContent = 'hello'
+// let titles = document.querySelectorAll('.title') //this will give us a node list, we can use array methods on node list
+// console.log(titles);
+// titles[0].textContent = 'hello'
 
-let odd = document.querySelectorAll('li:nth-child(odd)')
+// let odd = document.querySelectorAll('li:nth-child(odd)')
 
-for(let i = 0; i < odd.length; i ++){
-    odd[i].getElementsByClassName.backgroundColor = 'light grey'
-}
+// for(let i = 0; i < odd.length; i ++){
+//     odd[i].getElementsByClassName.backgroundColor = 'light grey'
+// }
+
+//Traversing the DOM
+
+// let itemList = document.querySelector('#items')
+// //parent node property
+
+// console.log(itemList.parentNode);//this returns the parent node of main
+// itemList.parentNode.style.backgroundColor = 'grey'
+// console.log(itemList.parentNode.parentNode);
+
+
+//parent element
+let itemList = document.querySelector('#items')
+//parent node property
+
+// console.log(itemList.parentElement);//this returns the parent node of main
+// itemList.parentElement.style.backgroundColor = 'grey'
+// console.log(itemList.parentElement.parentElement);
+
+
+//child nodes
+// console.log(itemList.childNodes); //takes white spaces into an account
+
+//children nodes
+
+// console.log(itemList.children[1]);
+// itemList.children[1].getElementsByClassName.backgroundColor = 'yellow'
+
+// //first child
+// console.log(itemList.firstChild); //this will give us white space
+
+// //first element child
+// console.log(itemList.firstElementChild); //this will give us first item on the list
+// itemList.firstElementChild.textContent = 'hello 1'
+
+
+
+// Last child 
+// console.log(itemList.lastChild);
+// itemList.lastChild.textContent //will show white space
+
+
+// console.log(itemList.lastElementChild);
+// itemList.lastElementChild.textContent = 'hello 5' //last item on the list
+
+
+//creating DOM elements / insert
+
+//create element method
+//create a section 
+
+let newSection = document.createElement('section')
+console.log(newSection);
+//adding class
+newSection.className = 'testing'
+
+//add id 
+newSection.id = 'testing2'
+
+//add attr 
+newSection.setAttribute('title', 'hello section')
+
+//create text node
+let newSectionText = document.createTextNode('hello testing')
+
+
+//add text to div 
+newSection.appendChild(newSectionText)
+
+//add it to th edom 
+let container  = document.querySelector('header .container');
+
+let h1 = document.querySelector('header h1')
+
+container.insertBefore(newSection, h1)
