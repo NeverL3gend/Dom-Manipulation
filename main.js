@@ -155,27 +155,42 @@ let itemList = document.querySelector('#items')
 //create element method
 //create a section 
 
-let newSection = document.createElement('section')
-console.log(newSection);
-//adding class
-newSection.className = 'testing'
+// let newSection = document.createElement('section')
+// console.log(newSection);
+// //adding class
+// newSection.className = 'testing'
 
-//add id 
-newSection.id = 'testing2'
+// //add id 
+// newSection.id = 'testing2'
 
-//add attr 
-newSection.setAttribute('title', 'hello section')
+// //add attr 
+// newSection.setAttribute('title', 'hello section')
 
-//create text node
-let newSectionText = document.createTextNode('hello testing')
+// //create text node
+// let newSectionText = document.createTextNode('hello testing')
 
 
-//add text to div 
-newSection.appendChild(newSectionText)
+// //add text to div 
+// newSection.appendChild(newSectionText)
 
-//add it to th edom 
-let container  = document.querySelector('header .container');
+// //add it to th edom 
+// let container  = document.querySelector('header .container');
 
-let h1 = document.querySelector('header h1')
+// let h1 = document.querySelector('header h1')
 
-container.insertBefore(newSection, h1)
+// container.insertBefore(newSection, h1)
+
+
+
+// Events handlers
+
+let button = document.getElementById('button').addEventListener('click', function() {
+    console.log(123);
+})
+
+ function buttonClick(e) {
+    //  console.log('button clicked');
+    //  document.getElementById('header-title').textContent = 'changed'
+    //  document.querySelector('#main').style.backgroundColor = '#f4f4f4'
+    console.log(e);
+ }
